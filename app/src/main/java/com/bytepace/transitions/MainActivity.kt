@@ -1,16 +1,16 @@
 package com.bytepace.transitions
 
-import android.app.Activity
 import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : Activity() {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.allowEnterTransitionOverlap = true
+        //window.allowEnterTransitionOverlap = true
         setContentView(R.layout.activity_main)
 
         iv1.setOnClickListener {
@@ -28,6 +28,10 @@ class MainActivity : Activity() {
         iv4.setOnClickListener {
             startActivity(Intent(this, ImageActivity::class.java).putExtra("photo", R.drawable.jelly_bean),
                 ActivityOptions.makeSceneTransitionAnimation(this, iv4, "photo").toBundle())
+        }
+
+        button.setOnClickListener {
+            startActivity(Intent(this, RecyclerViewActivity::class.java))
         }
     }
 }

@@ -2,19 +2,19 @@ package com.bytepace.transitions
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.view_recycler.*
+import kotlinx.android.synthetic.main.activity_image_text.*
 
-class ImageActivity : AppCompatActivity() {
+class ImageTextActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //window.allowEnterTransitionOverlap = true
-        setContentView(R.layout.activity_image)
-        imageView.setImageResource(intent.getIntExtra("photo", -1))
+        setContentView(R.layout.activity_image_text)
         button.setOnClickListener {
             onBackPressed()
         }
+        imageView.setImageResource(intent.getIntExtra("res", -1))
+        textView.text = intent.getStringExtra("text")
     }
 
     override fun onBackPressed() {

@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:dist="http://schemas.android.com/apk/distribution"
-          package="com.bytepace.transitions">
-
-    <dist:module dist:instant="true"/>
+    package="com.bytepace.transitions">
 
     <application
-            android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name"
-            android:roundIcon="@mipmap/ic_launcher_round">
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:roundIcon="@mipmap/ic_launcher_round">
 
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/AppTheme">
+            android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".ImageActivity"
-            android:theme="@style/AppTheme"/>
+            android:name=".ImageActivity" />
+
+        <activity
+            android:name=".RecyclerViewActivity" />
+
+        <activity
+            android:name=".ImageTextActivity" />
 
     </application>
 </manifest>
