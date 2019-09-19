@@ -23,11 +23,16 @@ class RecyclerViewActivity: AppCompatActivity() {
             }
         }
         recyclerView.adapter = RVAdapter { textView, imageView, text, imageRes ->
-            startActivity(
+            startActivity (
                 Intent(baseContext, ImageTextActivity::class.java)
                 .putExtra("res", imageRes)
                 .putExtra("text", text),
-                ActivityOptions.makeSceneTransitionAnimation(this, Pair(textView, "text_rv"), Pair(imageView, "photo_rv")).toBundle())
+                ActivityOptions.makeSceneTransitionAnimation (
+                    this,
+                    Pair(textView, "text_rv"),
+                    Pair(imageView, "photo_rv")
+                ).toBundle()
+            )
         }
     }
 }

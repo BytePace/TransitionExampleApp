@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //window.allowEnterTransitionOverlap = true
+        window.allowEnterTransitionOverlap = true
         setContentView(R.layout.activity_main)
 
         iv1.setOnClickListener {
